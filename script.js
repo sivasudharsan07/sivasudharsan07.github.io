@@ -113,7 +113,7 @@ desc:[
 
 {
 title:"Seaport Logistics Calculator",
-tech:"HTML, CSS, Java",
+tech:"HTML, Tailwind CSS, JavaScript",
 time:"Semester 5 (Jul–Nov 2025)",
 desc:[
 "Developed logistics cost estimation tool for port cargo.",
@@ -175,7 +175,7 @@ const projectSkillMap=[
 ["HTML","CSS","JavaScript","MySQL"],
 ["Flutter","PostgreSQL","Firebase"],
 ["Python","NumPy","Matplotlib","Flask"],
-["HTML","CSS","Java"],
+["HTML","CSS","JavaScript"],
 ["Python","Flask","RandomForest","XGBoost"]
 
 ];
