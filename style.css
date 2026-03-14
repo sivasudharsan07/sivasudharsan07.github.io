@@ -144,8 +144,46 @@ color:#4df3ff;
 
 .project-role{background:rgba(255,0,255,0.15);border-color:#ff007f;color:#ff007f;}
 
-.project-type-text{color:#00e6ff;font-weight:600;margin-right:12px;}
-.project-role-text{color:#ff48d5;font-weight:600;}
+.project-type-text,.project-role-text{
+  display:inline-block;
+  background:rgba(58, 133, 255, 0.2);
+  border: 1px solid rgba(58, 133, 255, 0.7);
+  border-radius: 16px;
+  padding: 4px 10px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  margin-right: 8px;
+  color:#b8efff;
+  position: relative;
+}
+
+.project-type-text{
+  background:rgba(0, 230, 255, 0.18);
+  border-color:#00d4ff;
+  color:#00f2ff;
+}
+
+.project-role-text{
+  background:rgba(255, 0, 255, 0.18);
+  border-color:#ff40d4;
+  color:#ff66e5;
+}
+
+.project-type-text::before,.project-role-text::before{
+  position: absolute;
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  content: '';
+}
+
+.project-type-text::before{background:#00f2ff;}
+.project-role-text::before{background:#ff66e5;}
+
 .project-extra{margin:10px 0;font-size:0.96rem;}
 
 .project-details{
