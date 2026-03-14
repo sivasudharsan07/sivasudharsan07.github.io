@@ -386,10 +386,15 @@ height:450px !important;
 }
 
 #skillRadar{
-  width:100%;
+  width:100% !important;
   max-width:650px;
-  height:460px;
+  min-width:320px;
+  height:460px !important;
+  min-height:460px !important;
+  max-height:460px !important;
   margin:30px auto;
+  display:block;
+  align-self:center;
   border:1px solid rgba(77,243,255,0.35);
   border-radius:10px;
   background:rgba(10,10,15,0.65);
@@ -400,12 +405,21 @@ height:450px !important;
   margin:30px auto;
   max-width:700px;
   text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
 }
 
 .radar-section h3{
   margin-bottom:10px;
   color:#39ff14;
   font-family:Orbitron, sans-serif;
+}
+
+#skillRadar{
+  margin: 0 auto 30px auto;
+  display: block;
 }
 
 .achievement-grid{
@@ -546,6 +560,31 @@ min-width:160px;
 
 .skills-grid{
 grid-template-columns:repeat(2,1fr);
+}
+
+.mapping-layout{
+grid-template-columns:1fr;
+gap:20px;
+}
+
+.project-map{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.map-project{
+width:calc(50% - 10px);
+min-width:140px;
+margin-bottom:8px;
+}
+
+#skillRadar{
+ width:100% !important;
+ max-width:100% !important;
+ height:340px !important;
+ min-height:340px !important;
+ max-height:340px !important;
 }
 
 }
