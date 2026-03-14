@@ -331,6 +331,68 @@ y:{display:false}
 
 
 /* =========================
+   SKILL RADAR CHART
+========================= */
+
+const radarCanvas = document.getElementById("skillRadar");
+
+if(radarCanvas){
+  new Chart(radarCanvas,{ 
+    type:"radar",
+    data:{
+      labels:["Java","C","Linked Lists","Arrays","Python","HTML","CSS","JavaScript","MySQL","Flutter","PostgreSQL","Firebase","Flask","NumPy","Matplotlib","RandomForest","XGBoost"],
+      datasets:[{
+        label:"Skill Proficiency",
+        data:[8,7,7,7,8,7,7,7,6,6,6,6,7,7,7,6,6],
+        backgroundColor:"rgba(77,243,255,0.18)",
+        borderColor:"#4df3ff",
+        pointBackgroundColor:"#ff007f",
+        pointBorderColor:"#ffffff",
+        pointHoverBackgroundColor:"#39ff14",
+        borderWidth:2,
+        fill:true
+      }]
+    },
+    options:{
+      responsive:true,
+      plugins:{
+        legend:{
+          display:true,
+          labels:{
+            color:"#ffffff"
+          }
+        }
+      },
+      elements:{
+        line:{
+          tension:0.3
+        }
+      },
+      scales:{
+        r:{
+          angleLines:{
+            color:"rgba(77,243,255,0.3)"
+          },
+          grid:{
+            color:"rgba(77,243,255,0.25)"
+          },
+          pointLabels:{
+            color:"#ffffff"
+          },
+          suggestedMin:0,
+          suggestedMax:10,
+          ticks:{
+            color:"#a5ffff",
+            display:false
+          }
+        }
+      }
+    }
+  });
+}
+
+
+/* =========================
    FLOATING BACKGROUND
 ========================= */
 

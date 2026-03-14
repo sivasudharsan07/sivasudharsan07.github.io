@@ -156,6 +156,7 @@ color:#4df3ff;
   margin-right: 8px;
   color:#b8efff;
   position: relative;
+  margin-bottom: 8px;
 }
 
 .project-type-text{
@@ -210,7 +211,7 @@ color:#39ff14;
 }
 
 .project-details ul li {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 
@@ -383,6 +384,30 @@ width:100% !important;
 height:450px !important;
 
 }
+
+#skillRadar{
+  width:100%;
+  max-width:650px;
+  height:460px;
+  margin:30px auto;
+  border:1px solid rgba(77,243,255,0.35);
+  border-radius:10px;
+  background:rgba(10,10,15,0.65);
+  box-shadow:0 0 15px rgba(77,243,255,0.25);
+}
+
+.radar-section{
+  margin:30px auto;
+  max-width:700px;
+  text-align:center;
+}
+
+.radar-section h3{
+  margin-bottom:10px;
+  color:#39ff14;
+  font-family:Orbitron, sans-serif;
+}
+
 .achievement-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
