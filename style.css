@@ -121,6 +121,27 @@ background:#091b28;
 box-shadow:0 0 10px #4df3ff;
 }
 
+.project-title{
+font-weight:bold;
+margin-bottom:8px;
+font-size:1rem;
+}
+
+.project-meta{
+display:flex;
+flex-wrap:wrap;
+gap:6px;
+}
+
+.project-badge{
+font-size:0.72rem;
+padding:3px 8px;
+border-radius:999px;
+background:rgba(77,243,255,0.15);
+border:1px solid rgba(77,243,255,0.5);
+color:#4df3ff;
+}
+
 .project-details{
 border:1px solid #4df3ff;
 border-radius:8px;

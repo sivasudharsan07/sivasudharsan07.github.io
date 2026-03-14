@@ -65,6 +65,8 @@ const projects = [
 
 {
 title:"Flight Reservation System",
+type:"INDIVIDUAL PROJECT",
+role:"Developer",
 tech:"Linked Lists, Arrays, C",
 time:"Semester 2 (Jan–Jun 2024)",
 desc:[
@@ -77,6 +79,8 @@ desc:[
 
 {
 title:"Income Tax Calculator",
+type:"TEAM PROJECT",
+role:"Frontend + Backend Developer",
 tech:"HTML, CSS, JavaScript, MySQL",
 time:"Semester 3 (Jul–Dec 2024)",
 desc:[
@@ -89,6 +93,8 @@ desc:[
 
 {
 title:"Nutrimealo",
+type:"TEAM PROJECT",
+role:"System Architect",
 tech:"Flutter, PostgreSQL, Firebase",
 time:"Semester 4 (Jan–May 2025)",
 desc:[
@@ -101,6 +107,8 @@ desc:[
 
 {
 title:"Student Mark Analysis",
+type:"TEAM PROJECT",
+role:"Data Analyst & Frontend Developer",
 tech:"Python, NumPy, Matplotlib, Flask",
 time:"Semester 5 (Jul–Nov 2025)",
 desc:[
@@ -113,6 +121,8 @@ desc:[
 
 {
 title:"Seaport Logistics Calculator",
+type:"INDIVIDUAL PROJECT",
+role:"UI Developer & Algo Implementer",
 tech:"HTML, Tailwind CSS, JavaScript",
 time:"Semester 5 (Jul–Nov 2025)",
 desc:[
@@ -125,6 +135,8 @@ desc:[
 
 {
 title:"Intrusion Detection System",
+type:"INDIVIDUAL PROJECT",
+role:"Data Analyst & ML Engineer",
 tech:"Python, Flask, Random Forest, XGBoost",
 time:"Semester 6 (Jan 2026 – Present)",
 desc:[
@@ -157,12 +169,37 @@ list += `<li>${point}</li>`;
 
 details.innerHTML = `
 <h3>${p.title}</h3>
+<p><b>Type:</b> ${p.type}</p>
+<p><b>Role:</b> ${p.role}</p>
 <p><b>Technologies:</b> ${p.tech}</p>
 <p><b>Timeline:</b> ${p.time}</p>
 <ul>${list}</ul>
 `;
 
 }
+
+function renderProjectList(){
+  const list = document.getElementById("projectList");
+  if(!list) return;
+
+  let html = "";
+
+  projects.forEach((p,index)=>{
+    html += `
+      <div class="project-card" onclick="showProject(${index}); highlightSkills(${index});">
+        <div class="project-title">${p.title}</div>
+        <div class="project-meta">
+          <span class="project-badge project-type">${p.type}</span>
+          <span class="project-badge project-role">${p.role}</span>
+        </div>
+      </div>
+    `;
+  });
+
+  list.innerHTML = html;
+}
+
+renderProjectList();
 
 
 /* =========================
