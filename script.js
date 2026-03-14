@@ -334,9 +334,13 @@ y:{display:false}
    SKILL RADAR CHART
 ========================= */
 
-const radarCanvas = document.getElementById("skillRadar");
+function initSkillRadar(){
+  const radarCanvas = document.getElementById("skillRadar");
+  if(!radarCanvas){
+    console.warn("Skill radar canvas element not found");
+    return;
+  }
 
-if(radarCanvas){
   new Chart(radarCanvas,{ 
     type:"radar",
     data:{
@@ -355,6 +359,8 @@ if(radarCanvas){
     },
     options:{
       responsive:true,
+      maintainAspectRatio:true,
+      aspectRatio:1.2,
       plugins:{
         legend:{
           display:true,
@@ -389,6 +395,12 @@ if(radarCanvas){
       }
     }
   });
+}
+
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', initSkillRadar);
+}else{
+  initSkillRadar();
 }
 
 
