@@ -169,10 +169,12 @@ list += `<li>${point}</li>`;
 
 details.innerHTML = `
 <h3>${p.title}</h3>
-<p><b>Type:</b> ${p.type}</p>
-<p><b>Role:</b> ${p.role}</p>
 <p><b>Technologies:</b> ${p.tech}</p>
 <p><b>Timeline:</b> ${p.time}</p>
+<p class="project-extra">
+  <span class="project-type-text">Type: ${p.type}</span>
+  <span class="project-role-text">Role: ${p.role}</span>
+</p>
 <ul>${list}</ul>
 `;
 
@@ -189,7 +191,6 @@ function renderProjectList(){
       <div class="project-card" onclick="showProject(${index}); highlightSkills(${index});">
         <div class="project-title">${p.title}</div>
         <div class="project-meta">
-          <span class="project-badge project-type">${p.type}</span>
           <span class="project-badge project-role">${p.role}</span>
         </div>
       </div>

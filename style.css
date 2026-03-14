@@ -142,6 +142,12 @@ border:1px solid rgba(77,243,255,0.5);
 color:#4df3ff;
 }
 
+.project-role{background:rgba(255,0,255,0.15);border-color:#ff007f;color:#ff007f;}
+
+.project-type-text{color:#00e6ff;font-weight:600;margin-right:12px;}
+.project-role-text{color:#ff48d5;font-weight:600;}
+.project-extra{margin:10px 0;font-size:0.96rem;}
+
 .project-details{
 border:1px solid #4df3ff;
 border-radius:8px;
@@ -159,6 +165,16 @@ margin-bottom:18px;
 .project-details b{
 color:#39ff14;
 }
+
+.project-details ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.project-details ul li {
+  margin-bottom: 8px;
+}
+
 
 /* charts */
 
