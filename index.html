@@ -2,291 +2,286 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Siva Sudharsan Portfolio</title>
-
+<meta name="description" content="Siva Sudharsan S – Software Developer & System Architect. M.Sc Computer Science at College of Engineering Guindy. Portfolio showcasing projects in ML, Full Stack, and Cybersecurity.">
+<title>Siva Sudharsan | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="preloader-content">
+    <div class="preloader-name">Siva Sudharsan S</div>
+    <div class="preloader-role">Software Developer &amp; System Architect</div>
+    <div class="preloader-line"><span></span></div>
+  </div>
+</div>
+
+<!-- FLOATING BACKGROUND -->
 <canvas id="bg"></canvas>
 
-<header>
-
-<h1>Siva Sudharsan S</h1>
-
-<nav>
-
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#experience">Experience</a>
-<a href="#skill-project-map">Skills</a>
-<a href="#accomplishments">Accomplishments</a>
-<a href="#contributions">Contributions</a>
-<a href="#contact">Contact</a>
-
-</nav>
-
+<!-- HEADER -->
+<header id="mainHeader">
+  <div class="header-brand">
+    <span class="brand-name">Siva Sudharsan S</span>
+  </div>
+  <nav id="mainNav">
+    <a href="#about" onclick="closeNav()">About</a>
+    <a href="#projects" onclick="closeNav()">Projects</a>
+    <a href="#experience" onclick="closeNav()">Experience</a>
+    <a href="#skill-project-map" onclick="closeNav()">Skills</a>
+    <a href="#accomplishments" onclick="closeNav()">Achievements</a>
+    <a href="#contributions" onclick="closeNav()">Contributions</a>
+    <a href="#contact" onclick="closeNav()">Contact</a>
+  </nav>
+  <div class="header-right">
+    <div class="header-status">
+      <span class="status-dot"></span>
+      <span>Available for Opportunities</span>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
-
+<div class="nav-overlay" id="navOverlay" onclick="closeNav()"></div>
 
 <!-- HERO -->
-
 <section class="hero" id="about">
-
-<div class="hero-text">
-
-<h2>Software Developer</h2>
-
-<h3 style="color:#ff0000; font-family:Orbitron,sans-serif; margin-top:2px;">System Architect</h3>
-
-
-<p>
-M.Sc Computer Science <br>
-College of Engineering Guindy
-</p>
-
-</div>
-
-<div>
-
-<img src="profile.jpg" class="profile" alt="Profile Picture">
-
-</div>
-
+  <div class="hero-text">
+    <div class="hero-greeting">Hello, I'm</div>
+    <h1>Siva Sudharsan S</h1>
+    <h2>Software Developer</h2>
+    <h3 class="hero-subtitle">System Architect</h3>
+    <p class="hero-desc">
+      M.Sc Computer Science<br>
+      <span class="hero-college">College of Engineering Guindy</span>
+    </p>
+    <div class="hero-tags">
+      <span class="hero-tag">Machine Learning</span>
+      <span class="hero-tag">Full Stack</span>
+      <span class="hero-tag">Cybersecurity</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-secondary">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-image-wrap">
+    <div class="hero-image-ring"></div>
+    <img src="profile.jpg" class="profile" alt="Siva Sudharsan S – Profile Picture">
+    <div class="hero-badge">
+      <span>M.Sc CS &middot; CEG</span>
+    </div>
+  </div>
 </section>
 
-
 <!-- TERMINAL -->
-
-<section class="terminal">
-
-<div id="terminalBox">
-
-<p id="loadingText"></p>
-
-<div id="terminalContent"></div>
-
-</div>
-
+<section class="terminal-section">
+  <div id="terminalBox">
+    <div class="terminal-header">
+      <span class="terminal-dot red"></span>
+      <span class="terminal-dot yellow"></span>
+      <span class="terminal-dot green"></span>
+      <span class="terminal-title">developer@portfolio:~$</span>
+    </div>
+    <p id="loadingText"></p>
+    <div id="terminalContent"></div>
+  </div>
 </section>
 
 <!-- PROJECTS -->
-
 <section id="projects">
+  <div class="section-label">01 / PROJECTS</div>
+  <h2>Featured Projects</h2>
+  <p class="section-sub">Click a project to explore details, tech stack & my role</p>
 
-<h2>Projects</h2>
-
-<div class="project-layout">
-
-<div class="project-list" id="projectList">
-</div>
-
-<div class="project-details" id="projectDetails">
-
-<h3 style="color: #ee0101;">Select a project</h3>
-<p>Click a project to view details.</p>
-
-</div>
-
-</div>
-
+  <div class="project-layout">
+    <div class="project-list" id="projectList"></div>
+    <div class="project-details" id="projectDetails">
+      <div class="project-placeholder">
+        <div class="placeholder-icon">&lt;/&gt;</div>
+        <h3>Select a Project</h3>
+        <p>Click any project card on the left to explore its details, tech stack, timeline, and my contributions.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- EXPERIENCE -->
-
+<!-- EXPERIENCE TIMELINE -->
 <section id="experience">
-
-<h2>Experience Timeline</h2>
-
-<div class="timeline-container">
-<canvas id="timeline"></canvas>
-</div>
-
+  <div class="section-label">02 / EXPERIENCE</div>
+  <h2>Project Timeline</h2>
+  <p class="section-sub">Complexity growth across academic semesters</p>
+  <div class="chart-card">
+    <div class="chart-card-header">
+      <span>Project Complexity Over Time</span>
+    </div>
+    <div class="timeline-container">
+      <canvas id="timeline"></canvas>
+    </div>
+  </div>
 </section>
 
-
-<!-- SKILL PROJECT MAPPING -->
-
+<!-- SKILLS & PROJECT MAPPING -->
 <section id="skill-project-map">
+  <div class="section-label">03 / SKILLS</div>
+  <h2>Skills &amp; Project Mapping</h2>
+  <p class="section-sub">Select a project to highlight the skills used</p>
 
-<h2>Skills</h2>
+  <div class="skills-top-row">
 
-<div class="mapping-layout">
+    <!-- SKILLS GRID -->
+    <div class="skills-panel">
+      <div class="panel-title">Tech Stack</div>
+      <div class="skills-grid" id="skillsGrid">
+        <div class="skill" data-skill="Java">Java</div>
+        <div class="skill" data-skill="C">C</div>
+        <div class="skill" data-skill="Linked Lists">Linked Lists</div>
+        <div class="skill" data-skill="Arrays">Arrays</div>
+        <div class="skill" data-skill="Python">Python</div>
+        <div class="skill" data-skill="HTML">HTML</div>
+        <div class="skill" data-skill="CSS">CSS</div>
+        <div class="skill" data-skill="JavaScript">JavaScript</div>
+        <div class="skill" data-skill="MySQL">MySQL</div>
+        <div class="skill" data-skill="Flutter">Flutter</div>
+        <div class="skill" data-skill="PostgreSQL">PostgreSQL</div>
+        <div class="skill" data-skill="Firebase">Firebase</div>
+        <div class="skill" data-skill="Flask">Flask</div>
+        <div class="skill" data-skill="NumPy">NumPy</div>
+        <div class="skill" data-skill="Matplotlib">Matplotlib</div>
+        <div class="skill" data-skill="RandomForest">RandomForest</div>
+        <div class="skill" data-skill="XGBoost">XGBoost</div>
+      </div>
+    </div>
 
-<!-- SKILLS GRID (60%) -->
+    <!-- PROJECT MAP -->
+    <div class="project-map-panel">
+      <div class="panel-title">Projects</div>
+      <div class="project-map" id="projectMapList">
+        <div class="map-project" onclick="highlightSkills(0); setActiveMapProject(this)">Flight Reservation System</div>
+        <div class="map-project" onclick="highlightSkills(1); setActiveMapProject(this)">Income Tax Calculator</div>
+        <div class="map-project" onclick="highlightSkills(2); setActiveMapProject(this)">Nutrimealo</div>
+        <div class="map-project" onclick="highlightSkills(3); setActiveMapProject(this)">Student Mark Analysis</div>
+        <div class="map-project" onclick="highlightSkills(4); setActiveMapProject(this)">Seaport Logistics Calculator</div>
+        <div class="map-project" onclick="highlightSkills(5); setActiveMapProject(this)">Intrusion Detection System</div>
+      </div>
+    </div>
 
-<div class="skills-grid" id="skillsGrid">
+  </div>
 
-<div class="skill" data-skill="Java">Java</div>
-<div class="skill" data-skill="C">C</div>
-<div class="skill" data-skill="Linked Lists">Linked Lists</div>
-<div class="skill" data-skill="Arrays">Arrays</div>
-
-<div class="skill" data-skill="Python">Python</div>
-<div class="skill" data-skill="HTML">HTML</div>
-<div class="skill" data-skill="CSS">CSS</div>
-<div class="skill" data-skill="JavaScript">JavaScript</div>
-
-<div class="skill" data-skill="MySQL">MySQL</div>
-<div class="skill" data-skill="Flutter">Flutter</div>
-<div class="skill" data-skill="PostgreSQL">PostgreSQL</div>
-<div class="skill" data-skill="Firebase">Firebase</div>
-
-<div class="skill" data-skill="Flask">Flask</div>
-<div class="skill" data-skill="NumPy">NumPy</div>
-<div class="skill" data-skill="Matplotlib">Matplotlib</div>
-<div class="skill" data-skill="RandomForest">RandomForest</div>
-
-<div class="skill" data-skill="XGBoost">XGBoost</div>
-
-</div>
-
-
-<!-- PROJECT LIST (40%) -->
-
-<div class="project-map">
-
-<div class="map-project" onclick="highlightSkills(0)">
-Flight Reservation System
-</div>
-
-<div class="map-project" onclick="highlightSkills(1)">
-Income Tax Calculator
-</div>
-
-<div class="map-project" onclick="highlightSkills(2)">
-Nutrimealo
-</div>
-
-<div class="map-project" onclick="highlightSkills(3)">
-Student Mark Analysis
-</div>
-
-<div class="map-project" onclick="highlightSkills(4)">
-Seaport Logistics Calculator
-</div>
-
-<div class="map-project" onclick="highlightSkills(5)">
-Intrusion Detection System
-</div>
-
-</div>
-
-<div class="radar-section">
-  <h3>Skill Radar</h3>
-  <canvas id="skillRadar"></canvas>
-</div>
+  <!-- RADAR CHART — full width below -->
+  <div class="radar-section">
+    <div class="chart-card">
+      <div class="chart-card-header">
+        <span>Skill Proficiency Radar</span>
+      </div>
+      <div class="radar-canvas-wrap">
+        <canvas id="skillRadar"></canvas>
+      </div>
+    </div>
+  </div>
 
 </section>
+
+<!-- ACCOMPLISHMENTS -->
 <section id="accomplishments">
-
-<h2>Accomplishments & Certifications</h2>
-
-<div class="achievement-grid">
-
-<div class="achievement-card">
-<ul>
-
-<li>
-Attended a <b>5-day workshop on “NextGen Intelli: Generative AI”</b> conducted by the Department of Mathematics, CEG.  
-Gained foundational knowledge in <b>Artificial Intelligence and Machine Learning</b>. (1st Year)
-</li>
-
-<li>
-Secured <b>1st Place in AlgoArena 1.0</b>, a coding competition conducted by the Department of Mathematics, CEG,  
-testing algorithmic thinking and problem-solving skills. (1st Year)
-</li>
-
-<li>
-Participated in the idea presentation of <b>HDIMS (Health Data Information Management System)</b>  
-at <b>Smart India Hackathon (SIH)</b>. (2nd Year)
-</li>
-
-<li>
-Attended a workshop on <b>“Data Privacy & Authentication in Cyber Space”</b>  
-conducted by <b>CDAC – Noida</b>.
-</li>
-
-</ul>
-</div>
-
-</div>
-
+  <div class="section-label">04 / ACHIEVEMENTS</div>
+  <h2>Accomplishments &amp; Certifications</h2>
+  <div class="achievement-grid">
+    <div class="achievement-card">
+      <h3>Generative AI Workshop</h3>
+      <p>Attended a <b>5-day workshop on "NextGen Intelli: Generative AI"</b> conducted by the Department of Mathematics, CEG. Gained foundational knowledge in AI &amp; ML. <span class="achieve-year">1st Year</span></p>
+    </div>
+    <div class="achievement-card gold">
+      <h3>AlgoArena 1.0 – 1st Place</h3>
+      <p>Secured <b>1st Place in AlgoArena 1.0</b>, a coding competition conducted by the Department of Mathematics, CEG, testing algorithmic thinking and problem-solving skills. <span class="achieve-year">1st Year</span></p>
+    </div>
+    <div class="achievement-card">
+      <h3>Smart India Hackathon</h3>
+      <p>Participated in the idea presentation of <b>HDIMS (Health Data Information Management System)</b> at <b>Smart India Hackathon (SIH)</b>. <span class="achieve-year">2nd Year</span></p>
+    </div>
+    <div class="achievement-card">
+      <h3>Cybersecurity Workshop</h3>
+      <p>Attended a workshop on <b>"Data Privacy &amp; Authentication in Cyber Space"</b> conducted by <b>CDAC – Noida</b>.</p>
+    </div>
+  </div>
 </section>
 
-
-
+<!-- CONTRIBUTIONS -->
 <section id="contributions">
-
-<h2>Contributions & Leadership</h2>
-
-<div class="achievement-grid">
-
-<div class="achievement-card">
-<ul>
-
-<li>
-<b>NSS Volunteer (2023 – Present)</b>  
-Actively participating in social service activities and community engagement programs.
-</li>
-
-<li>
-<b>Class Representative – Semester 2</b>  
-Coordinated communication between students and faculty and helped organize academic schedules.
-</li>
-
-<li>
-<b>Event In-Charge – IPL Auction Event</b>  
-Organized and successfully conducted the IPL Auction in symposium <b style="color: #ff007f;">Mathrix-2026</b> by coordinating logistics and participants.
-</li>
-
-</ul>
-</div>
-
-</div>
-
+  <div class="section-label">05 / LEADERSHIP</div>
+  <h2>Contributions &amp; Leadership</h2>
+  <div class="contribution-timeline">
+    <div class="contrib-item">
+      <div class="contrib-dot"></div>
+      <div class="contrib-content">
+        <h3>NSS Volunteer</h3>
+        <span class="contrib-period">2023 – Present</span>
+        <p>Actively participating in social service activities and community engagement programs.</p>
+      </div>
+    </div>
+    <div class="contrib-item">
+      <div class="contrib-dot"></div>
+      <div class="contrib-content">
+        <h3>Class Representative</h3>
+        <span class="contrib-period">Semester 2</span>
+        <p>Coordinated communication between students and faculty, and helped organize academic schedules.</p>
+      </div>
+    </div>
+    <div class="contrib-item">
+      <div class="contrib-dot pink"></div>
+      <div class="contrib-content">
+        <h3>Event In-Charge – IPL Auction</h3>
+        <span class="contrib-period">Mathrix-2026</span>
+        <p>Organized and successfully conducted the IPL Auction in symposium <b style="color:#ff007f">Mathrix-2026</b> by coordinating logistics and participants.</p>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- CONTACT -->
-
 <section id="contact">
-
-
-<h2>Contact</h2>
-<div class="contact-row">
-<div class="contact-item">
-	<a href="mailto:sivasudharsan.annauniv@gmail.com" target="_blank" class="contact-icon" title="Email">
-		<img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" alt="Mail" />
-	</a>
-	<div class="contact-label">Mail</div>
-</div>
-	<div class="contact-item">
-		<a href="https://github.com/sivasudharsan07" target="_blank" class="contact-icon" title="GitHub">
-			<img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" />
-		</a>
-		<div class="contact-label">GitHub</div>
-	</div>
-	<div class="contact-item">
-		<a href="https://linkedin.com/in/siva-sudharsan-16454834b" target="_blank" class="contact-icon" title="LinkedIn">
-			<img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" />
-		</a>
-		<div class="contact-label">LinkedIn</div>
-	</div>
-</div>
-
+  <div class="section-label">06 / CONTACT</div>
+  <h2>Get In Touch</h2>
+  <p class="section-sub">Feel free to reach out for collaborations or opportunities</p>
+  <div class="contact-row">
+    <div class="contact-item">
+      <a href="mailto:sivasudharsan.annauniv@gmail.com" target="_blank" class="contact-icon" title="Email">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" alt="Mail" />
+      </a>
+      <div class="contact-label">Mail</div>
+    </div>
+    <div class="contact-item">
+      <a href="https://github.com/sivasudharsan07" target="_blank" class="contact-icon" title="GitHub">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" />
+      </a>
+      <div class="contact-label">GitHub</div>
+    </div>
+    <div class="contact-item">
+      <a href="https://linkedin.com/in/siva-sudharsan-16454834b" target="_blank" class="contact-icon" title="LinkedIn">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" />
+      </a>
+      <div class="contact-label">LinkedIn</div>
+    </div>
+  </div>
 </section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-brand">Siva Sudharsan S</span>
+    <span class="footer-sep">·</span>
+    <span class="footer-copy">Built with passion &amp; code © 2026</span>
+  </div>
+</footer>
 
 <script src="script.js"></script>
-
 </body>
-
 </html>
